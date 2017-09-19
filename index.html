@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Flickr Photo Picker</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1 class="Header">Flickr Photo Picker</h1>
+
+    <div id="container">
+        <div id="searchSection">
+            <form class="center" onsubmit="return searchPhotosFlickr(searchInput.value);">
+                <label>Search</label>
+                <input type="text" class="search-input" name="searchInput" placeholder="Search" />
+                <div id="show-gallery" class="text-button" onClick="makeVisible()">Gallery</div>
+            </form>
+        </div>
+
+        <!-- Image Pool -->
+        <div id="img-container"></div>
+    </div>
+
+    <!-- Create Modal Look   -->
+    <div id="imgModal" class="modal">
+        <span class="finish" onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+        <img class="modal-image" id="displayImg">
+    </div>
+
+    <script src="main.js"></script>
+    </body>
+</html>
+
+
+
